@@ -31,8 +31,17 @@ body {
 }
 
 .MainWrapperDesktop {
-  @apply md:p-4 lg:flex-row md:flex-col
+  @apply md:p-4 lg:flex-col-reverse xl:flex-row
 }
+
+.PromptEngine {
+  @apply PromptEngineMD bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
+}
+
+.PromptEngineMD {
+  @apply  md:mr-6 md:ml-8 lg:mt-36 md:h-fit md:w-full md:p-4 xl:w-1/4 xl:-mt-[420px] lg:mb-36
+}
+
 
 
 
@@ -45,7 +54,7 @@ body {
 }
 
 .textEngine {
-  @apply min-h-fit border-2 focus:border-0 text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none align-text-bottom
+  @apply min-h-fit shadow-black shadow-2xl border-2 focus:border-0 text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none align-text-bottom
 }
 
 
@@ -79,17 +88,6 @@ body {
   @apply Hover Round  h-full w-screen  p-8 Shadow text-3xl HoverPush;
 }
 
-.PromptEngine {
-  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
-}
-
-.PromptEngineMD {
-  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
-}
-
-.PromptEngineLG {
-  @apply lg:w-1/4 lg:-mt-64 
-}
 
 .Opacity {
   @apply bg-opacity-90 
@@ -115,7 +113,7 @@ body {
 }
 
 .TypewriterLG {
-  @apply md:text-xl lg:leading-8 lg:shadow-violet-500
+  @apply md:text-xl lg:leading-8 lg:shadow-green-500
 }
 
 /* .ResultCard {
