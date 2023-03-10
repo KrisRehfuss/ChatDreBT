@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-// import BlackHole1 from "../../public/iconnew.png";
 import Cover from "../../public/EricAndreSet.jpg";
 import CoverVert from "../../public/EricAndreSetVert.jpg";
 import Ranch from '../../public/LegalizeRanch.png'
@@ -12,7 +11,6 @@ import callGPT from "../../common/openai";
 import { Configuration, OpenAIApi } from "openai";
 import sequence from "../../common/sequence";
 import Typewriter from "./TypeWriter";
-// import Banner from "./Banner";
 
 export default function Home() {
   const [requestInput, setRequestInput] = useState("Answer as Eric Andre. Include his absurdist humor. Have the response be explicit and detailed.");
