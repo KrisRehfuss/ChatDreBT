@@ -13,7 +13,7 @@ import sequence from "../../common/sequence";
 import Typewriter from "./TypeWriter";
 
 export default function Home() {
-  const [requestInput, setRequestInput] = useState("Answer as Eric Andre. Include his absurdist humor. Have the response be explicit and detailed.");
+  const [requestInput, setRequestInput] = useState("Answer as Eric Andre. Include his absurdist humor. Ensure the response is as accurate as possible.");
   const [textInput, setTextInput] = useState("");
   const [result, setResult] = useState([]);
   const [processing, setProcessing] = useState(false);
@@ -63,13 +63,13 @@ export default function Home() {
     return callGPT(chunk, requestInput, openai);
   }
 
-  function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-  }
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
 
   /**
    * This function is called when the user clicks the submit button.
-   * It calls the processChunk function in sequence for each chunk of the text.
+   * It calls the procesunk function in sequence for each chunk of the text.
    * It then sets the result state to the generated text.
    * @param {*} event
    */
@@ -81,7 +81,7 @@ export default function Home() {
       setResult([]);
 
       await sequence(chunks, (chunk, index) => {
-        scrollToBottom();
+        scrollToTop();
         setProgress(Math.round(((index - 1) / chunks.length) * 100));
         console.log(`Processing chunk: ${index} of ${chunks.length}`);
 
@@ -122,7 +122,7 @@ export default function Home() {
    * @param {*} request
    */
 const setRequestAndPersist = () => {
-  const request = "Answer as Eric Andre. Convey his absurdist personality.";
+  const request = "Answer as Eric Andre. Convey his humor and personality.";
   setRequestInput(request);
   
 };
@@ -139,7 +139,7 @@ const setRequestAndPersist = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      const newImageUrl = window.innerWidth >= 768 ? Cover : CoverVert;
+      const newImageUrl = window.innerWidth >= 1440 ? Cover : CoverVert;
       setImageUrl(newImageUrl);
     };
 
@@ -219,7 +219,7 @@ const setRequestAndPersist = () => {
                   <div className="PromptGroup mx-auto flex flex-col justify-center p-4">
                     <label className="Enter ">OpenAPI Key</label>
                     <textarea
-                      className="whitespace-nowrap px-4 pt-2 border-violet-500 textEngine text-sm text-transparent font-mont focus:text-white focus:shadow-pink-500 shadow-2xl shadow-black  "
+                      className="whitespace-nowrap px-4 pt-2 border-slate-500 textEngine text-sm text-transparent font-mont focus:text-white focus:shadow-Couch shadow-2xl shadow-black  "
                       id=""
                       // rows={1}
                       type="text"
@@ -251,7 +251,7 @@ const setRequestAndPersist = () => {
                       The text you want to process
                     </label>
                     <textarea
-                      className="textEngine pt-4 pb-6 px-4 border-green-500 shadow-2xl shadow-black"
+                      className="textEngine pt-4 pb-6 px-4 Desk shadow-2xl shadow-black"
                       type="text"
                       name="text"
                       // rows={3}
@@ -272,7 +272,7 @@ const setRequestAndPersist = () => {
                     <input
                       type="submit"
                       className="MARK mt-2 mb-6 p-4 md:mt-12 w-4/6 bg-green-800 cursor-pointer"
-                      value="Answer as Eric"
+                      value="Ask Eric"
                     />
                   )}
                   {/* {processing && (
@@ -336,20 +336,19 @@ const setRequestAndPersist = () => {
               <input
                 type="submit"
                 className=" hidden p-8 bg-blue-500 cursor-pointer"
-                value="Answer as Eric"
+                value="Process your request"
               />
             )}
             {processing && (
-              <input type="submit" value="Processing..." disabled />
-            )}
-            {processing && (
-              <progress
-                className="bg-sky-500 MARK p-2 m-4"
-                value={progress}
-                max="100"
+              <input
+                type="submit"
+                value="Processing..."
+                disabled
               />
             )}
+            {processing && <progress className="bg-sky-500 MARK p-2 m-4" value={progress} max="100" />}
             {result && <div></div>}
+
           </div>
         </div>
       </div>

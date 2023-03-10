@@ -22,13 +22,20 @@ module.exports = {
         pri: "#8e949e",
         whyte: "hsl(0, 0%, 100%)",
         Lgray: "hsl(212, 45%, 89%)",
+        Andre: "#902533",
+        Couch: "#cfb49c",
+        Carpet: "#525d7d",
+        Tan: "#ccbda9",
+        Desk: "#815f42",
       },
       fontFamily: {
+        sans: ["Helvetica", "Arial", "sans-serif"],
+
         inter: ["inter", "serif"],
         mont: ["Montserrat", "sans-serif"],
         pop: ["poppins", "sans-serif"],
-        tilt: ['Tilt Neon', 'cursive'],
-        helvetica: ['Helvetica', 'sans-serif']
+        tilt: ["Tilt Neon", "cursive"],
+        helvetica: ["Helvetica", "sans-serif"],
       },
     },
   },

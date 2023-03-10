@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 
+
 body {
   @apply bg-coal Smooth text-white font-pop scrollbar-hide scroll-smooth;
 }
@@ -39,7 +40,7 @@ body {
 }
 
 .PromptEngineMD {
-  @apply  md:mr-6 md:ml-8 lg:mt-36 md:h-fit md:w-full md:p-4 xl:w-1/4 xl:-mt-[420px] lg:mb-36
+  @apply  md:mr-6 md:ml-8  md:h-fit md:w-full md:p-4 lg:-mt-64 lg:mb-52 lg:w-2/4 xl:mb-36 xl:w-1/4 xl:-mt-[180px] 
 }
 
 
@@ -113,7 +114,7 @@ body {
 }
 
 .TypewriterLG {
-  @apply md:text-xl lg:leading-8 lg:shadow-green-500
+  @apply md:text-xl lg:leading-8 lg:shadow-Couch
 }
 
 /* .ResultCard {

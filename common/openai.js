@@ -24,8 +24,8 @@ export default async function callGPT(text, request, openai) {
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: generatePrompt(text, request),
-    temperature: 0.8,
-    max_tokens: 1900,
+    temperature: 0.7,
+    max_tokens: 1400,
   });
 
   return completion.data.choices[0].text;
