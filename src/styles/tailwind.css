@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-coal Smooth text-white font-pop scrollbar-hide scroll-smooth;
+}
+
+/* CSS GBT */
+
+.ResultContainer {
+  @apply w-[600px];
+}
+
+.size {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8e8ea0;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+
+  @apply ShadowWhite font-pop lg:mr-12 md:mt-24
+}
+
+.MainWrapper {
+  @apply flex flex-col-reverse items-center justify-evenly p-8 BoxFull MainWrapperDesktop
+}
+
+.MainWrapperDesktop {
+  @apply md:p-4 lg:flex-row md:flex-col
+}
+
+
+
+.PromptGroup {
+  @apply text-white mb-4 text-xl w-full h-fit flex flex-col justify-start p-4 
+}
+
+.PromptGroupMD {
+  @apply md:mb-8 md:text-xl md:w-full md:h-fit md:p-4
+}
+
+.textEngine {
+  @apply min-h-fit border-2 focus:border-0 text-center text-base bg-coal ClearDrop Round scrollbar-hide Round w-full resize-none align-text-bottom
+}
+
+
+
+.partLabel {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8e8ea0;
+  margin-bottom: 8px;
+}
+
+.GunGrade {
+  @apply bg-gradient-to-b from-gray-700 via-gray-900 to-black;
+}
+
+.ClearDrop {
+  @apply backdrop-blur-sm hover:backdrop-blur-sm;
+}
+
+.Clear {
+  @apply blur-sm;
+}
+
+/* ShadowBars */
+
+
+
+/* Customs */
+
+.SideBar {
+  @apply Hover Round  h-full w-screen  p-8 Shadow text-3xl HoverPush;
+}
+
+.PromptEngine {
+  @apply PromptEngineMD PromptEngineLG bg-coal flex flex-col justify-between Hover Glass min-h-[50px] h-fit w-full p-4 ClearDrop mb-4;
+}
+
+.PromptEngineMD {
+  @apply  md:mr-6 md:ml-8 md:mt-36 md:h-fit md:w-full md:p-4
+}
+
+.PromptEngineLG {
+  @apply lg:w-1/4 lg:-mt-64 
+}
+
+.Opacity {
+  @apply bg-opacity-90 
+}
+
+
+.BackingCard {
+  @apply BackingCardMD  ClearDrop z-20 mb-2 pb-2 relative Opacity flex-1 FlexCenterCol Round h-full w-full
+}
+
+.BackingCardMD {
+  @apply lg:-mt-36 lg:w-4/6 lg:p-8 md:justify-center md:mb-8 md:pb-8
+}
+
+
+
+.Typewriter {
+  @apply TypewriterMD bg-coal TypewriterLG p-8 Smoother Round cursor-pointer shadow-2xl shadow-pink-500
+}
+
+.TypewriterMD {
+  @apply md:text-xl md:leading-10 md:shadow-sky-500
+}
+
+.TypewriterLG {
+  @apply md:text-xl lg:leading-8 lg:shadow-violet-500
+}
+
+/* .ResultCard {
+  @apply 
+} */
+
+.DashTop {
+  @apply flex Round Shadow bg-coal bg-opacity-80  w-full h-full Hover HoverPush;
+}
+
+.DashBox {
+  @apply hidden Round bg-gray-500 Shadow Hover HoverPush;
+}
+
+
+.Enter {
+  @apply text-slate-400 mb-2 text-center text-lg h-fit
+}
+
+
+/* .MainDash {
+  @apply 
+} */
+
+.Focus {
+  @apply Hover transform active:scale-110 Smooth cursor-pointer;
+}
+
+.HoverPush {
+  @apply Hover transform hover:scale-95 Smooth cursor-pointer;
+}
+
+/* Structure */
+
+.MARK {
+  @apply Hover rounded-2xl border-2 border-slate-400;
+}
+
+.Hover {
+  @apply hover:border-x-sky-200 active:border-y-pink-200 Smooth;
+}
+
+.BoxFull {
+  @apply h-full w-full;
+}
+
+.BoxScreen {
+  @apply h-screen w-screen;
+}
+
+.BoxFit {
+  @apply h-fit w-fit;
+}
+
+.Round {
+  @apply rounded-2xl;
+}
+
+.FlexCenter {
+  @apply flex items-center justify-center;
+}
+
+.FlexCenterCol {
+  @apply flex flex-col items-center justify-evenly;
+}
+
+/* Styles */
+
+.Shade {
+  @apply shadow-white drop-shadow-md;
+}
+
+.Rshade {
+  @apply rounded-3xl shadow-white drop-shadow-xl;
+}
+
+.Shadow {
+  @apply shadow-2xl shadow-black;
+}
+
+.ShadowWhite {
+  @apply shadow-2xl shadow-white;
+}
+
+.wBorder {
+  @apply border-2 border-white;
+}
+
+.Smooth {
+  @apply duration-75 ease-linear;
+}
+
+.Smoother {
+  @apply duration-150 delay-75 ease-linear;
+}
+
+.Bounce {
+  @apply cursor-pointer hover:animate-bounce Smoother hover:drop-shadow-xl hover:text-white hover:shadow-zinc-900;
+}
+
+.Spin {
+  @apply cursor-none hover:animate-spin Smoother hover:drop-shadow-xl hover:shadow-zinc-900;
+}
+
+.NameShadow {
+  @apply shadow-black drop-shadow-md hover:text-sky-500;
+}
+
+.Glass {
+  @apply Shadow GlassMD;
+}
+
+.GlassMD {
+  @apply md:min-h-fit md:max-w-2xl;
+}
+
+/* Nav */
+
+.Nav {
+  @apply backdrop-blur-lg h-fit w-screen text-xl flex justify-center  md:p-4;
+}
+
+.NavItem {
+  @apply text-lg mx-4 p-4 font-pop cursor-pointer hover:underline hover:underline-offset-8 NavItemMD;
+}
+
+.NavItemMD {
+  @apply md:p-2 md:mx-8 ;
+}
+
+li {
+  @apply list-none;
+}
+
