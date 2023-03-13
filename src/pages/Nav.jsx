@@ -17,6 +17,14 @@ function Nav() {
             </a>
           </li>
         </div>
+
+        <div className="NavItem hover:text-green-500 text-white p-2 BoxFit">
+          <li>
+            <a href="https://krisengine.vercel.app/">
+              <span className="hover:text-green-500"> Dev Profile </span>
+            </a>
+          </li>
+        </div>
         {/* <div className="NavItem text-white p-2 BoxFit">
           <li>Prompts</li>
         </div> */}
